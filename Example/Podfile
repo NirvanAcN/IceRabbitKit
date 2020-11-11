@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'IceRabbitKit_Example' do
+  pod 'IceRabbitKit', :path => '../'
+
+  target 'IceRabbitKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

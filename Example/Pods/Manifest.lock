@@ -1,0 +1,16 @@
+PODS:
+  - IceRabbitKit (0.1.0)
+
+DEPENDENCIES:
+  - IceRabbitKit (from `../`)
+
+EXTERNAL SOURCES:
+  IceRabbitKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IceRabbitKit: eb1c10aba104fd7667686bfdff2669e4dcd9e131
+
+PODFILE CHECKSUM: a3b2e18ee9bfe8f67638777c96678f8093ea6e12
+
+COCOAPODS: 1.10.0
