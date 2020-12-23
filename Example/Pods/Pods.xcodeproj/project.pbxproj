@@ -15,6 +15,8 @@
 		42B8DCA6FBF9F4E2C131CF1102CC4432 /* NSTimer+Weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A11DA8C82EC88BC13261C6AEB4C9073 /* NSTimer+Weak.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		436A6E1B987D8A5DA35388BCEB8978FC /* NSArray+mhmCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = A6246CCA7AFB8E086957109431DAB854 /* NSArray+mhmCommon.m */; };
 		647AB3F984612E9143C542330FC18DE3 /* Pods-IceRabbitKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E84A54A6DA2C5F2A62B0860E6FF31D /* Pods-IceRabbitKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87F19D902593389500AF57EE /* NSMutableArray+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F19D8E2593389500AF57EE /* NSMutableArray+mhmCommon.h */; };
+		87F19D912593389500AF57EE /* NSMutableArray+mhmCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F19D8F2593389500AF57EE /* NSMutableArray+mhmCommon.m */; };
 		8FDF17336A3036F5CABFF2B42968C56F /* IceRabbitKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F0A17CA3AF6FCA8066046BA845A39 /* IceRabbitKit-dummy.m */; };
 		A95F17DDBAC1857AB5A9BE6F46A02444 /* IceRabbitKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030AAAC617B3770306DDB6008D88542E /* IceRabbitKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEA66ACAE50632AFD1524895EE9D1F40 /* NSArray+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D880DBB4180A2D56CB0B570CC82DC30 /* NSArray+mhmCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,23 +51,25 @@
 		0F1F0A17CA3AF6FCA8066046BA845A39 /* IceRabbitKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IceRabbitKit-dummy.m"; sourceTree = "<group>"; };
 		1D880DBB4180A2D56CB0B570CC82DC30 /* NSArray+mhmCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+mhmCommon.h"; sourceTree = "<group>"; };
 		20E84A54A6DA2C5F2A62B0860E6FF31D /* Pods-IceRabbitKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IceRabbitKit_Example-umbrella.h"; sourceTree = "<group>"; };
-		276D71D0873A0001BE202A1BF2387BC6 /* Pods_IceRabbitKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IceRabbitKit_Example.framework; path = "Pods-IceRabbitKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		276D71D0873A0001BE202A1BF2387BC6 /* Pods_IceRabbitKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceRabbitKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F88558715017111C8030AAFD9CE47E1 /* IceRabbitKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IceRabbitKit.modulemap; sourceTree = "<group>"; };
-		32BBCC07D600F753BAE66F5D3FE5F5B8 /* Pods_IceRabbitKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IceRabbitKit_Tests.framework; path = "Pods-IceRabbitKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BBCC07D600F753BAE66F5D3FE5F5B8 /* Pods_IceRabbitKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceRabbitKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E1C8FD322E31C2B90B674A6BED3D084 /* Pods-IceRabbitKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		494E0143A4805177BA4425247E01856E /* Pods-IceRabbitKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IceRabbitKit_Example-frameworks.sh"; sourceTree = "<group>"; };
-		4EF337038E8B9ADB909683ED8C32871C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4EF337038E8B9ADB909683ED8C32871C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		502DE6C23C4B4C4B0C77AB37E94B755C /* Pods-IceRabbitKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		52540F43E297B21E49328952A62C6204 /* Pods-IceRabbitKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IceRabbitKit_Tests-umbrella.h"; sourceTree = "<group>"; };
-		554D9E7A1B0F2985845F458B666E2CC9 /* IceRabbitKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IceRabbitKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		554D9E7A1B0F2985845F458B666E2CC9 /* IceRabbitKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = IceRabbitKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		55C58CE9724D106C92FED7870EC771A2 /* IceRabbitKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IceRabbitKit.release.xcconfig; sourceTree = "<group>"; };
 		7D02725C7203952781065A947DC72432 /* Pods-IceRabbitKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IceRabbitKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		81B0A4F3B8EC87BC790AEE2F1DE8F1EB /* Pods-IceRabbitKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		898B915E9CC38C8838835EA7AFA79D70 /* IceRabbitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IceRabbitKit.framework; path = IceRabbitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F19D8E2593389500AF57EE /* NSMutableArray+mhmCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+mhmCommon.h"; sourceTree = "<group>"; };
+		87F19D8F2593389500AF57EE /* NSMutableArray+mhmCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+mhmCommon.m"; sourceTree = "<group>"; };
+		898B915E9CC38C8838835EA7AFA79D70 /* IceRabbitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IceRabbitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD1738CB501A2A2533134446E17A2F2 /* Pods-IceRabbitKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		915D0E0C2D772E43CB74272AF53E1C90 /* MHMAuthorizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MHMAuthorizationManager.m; sourceTree = "<group>"; };
 		921E2E4A19CA4479633B49D9DF4E290A /* Pods-IceRabbitKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IceRabbitKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3742D79B4D311DEE5F337B35D5AE4FE /* Pods-IceRabbitKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IceRabbitKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A6246CCA7AFB8E086957109431DAB854 /* NSArray+mhmCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+mhmCommon.m"; sourceTree = "<group>"; };
 		A62E9C8EB951565C642D5ACFD2289C92 /* Pods-IceRabbitKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IceRabbitKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -75,7 +79,7 @@
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D8BC4FF3FD3E4F9ED8A7D3917B132435 /* Pods-IceRabbitKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IceRabbitKit_Tests-dummy.m"; sourceTree = "<group>"; };
 		DFFF570318DB7D5C7285902968C7973F /* IceRabbitKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IceRabbitKit-Info.plist"; sourceTree = "<group>"; };
-		E45A27300490E0E52943F6C78F68A113 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E45A27300490E0E52943F6C78F68A113 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E5AD4494674B3CC9E767A4012E7906B9 /* MHMAuthorizationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MHMAuthorizationManager.h; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EEA2A17757C35B3CC6BC40418717E7C8 /* Pods-IceRabbitKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IceRabbitKit_Example-dummy.m"; sourceTree = "<group>"; };
@@ -167,7 +171,6 @@
 				0A11DA8C82EC88BC13261C6AEB4C9073 /* NSTimer+Weak.h */,
 				B479BCB12DE6AA315DEC2A60370AF9CE /* NSTimer+Weak.m */,
 			);
-			name = NSTimer;
 			path = NSTimer;
 			sourceTree = "<group>";
 		};
@@ -220,7 +223,6 @@
 				E5AD4494674B3CC9E767A4012E7906B9 /* MHMAuthorizationManager.h */,
 				915D0E0C2D772E43CB74272AF53E1C90 /* MHMAuthorizationManager.m */,
 			);
-			name = Authorization;
 			path = Authorization;
 			sourceTree = "<group>";
 		};
@@ -267,8 +269,9 @@
 			children = (
 				1D880DBB4180A2D56CB0B570CC82DC30 /* NSArray+mhmCommon.h */,
 				A6246CCA7AFB8E086957109431DAB854 /* NSArray+mhmCommon.m */,
+				87F19D8E2593389500AF57EE /* NSMutableArray+mhmCommon.h */,
+				87F19D8F2593389500AF57EE /* NSMutableArray+mhmCommon.m */,
 			);
-			name = NSArray;
 			path = NSArray;
 			sourceTree = "<group>";
 		};
@@ -313,6 +316,7 @@
 				A95F17DDBAC1857AB5A9BE6F46A02444 /* IceRabbitKit-umbrella.h in Headers */,
 				C3816F0DD9EB39A2B0A1C0C7C4C30A62 /* MHMAuthorizationManager.h in Headers */,
 				BEA66ACAE50632AFD1524895EE9D1F40 /* NSArray+mhmCommon.h in Headers */,
+				87F19D902593389500AF57EE /* NSMutableArray+mhmCommon.h in Headers */,
 				42B8DCA6FBF9F4E2C131CF1102CC4432 /* NSTimer+Weak.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +449,7 @@
 				8FDF17336A3036F5CABFF2B42968C56F /* IceRabbitKit-dummy.m in Sources */,
 				401342E7572555020F416531D34A9790 /* MHMAuthorizationManager.m in Sources */,
 				436A6E1B987D8A5DA35388BCEB8978FC /* NSArray+mhmCommon.m in Sources */,
+				87F19D912593389500AF57EE /* NSMutableArray+mhmCommon.m in Sources */,
 				2C9AF50BC6F6147ECDB9BA632AE309BD /* NSTimer+Weak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,8 +702,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
