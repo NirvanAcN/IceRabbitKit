@@ -9,7 +9,7 @@
 
 @implementation NSMutableArray (mhmCommon)
 
-- (void)moveObjectAtIndex:(NSUInteger)idx1 toObjectAtIndex:(NSUInteger)idx2 {
+- (void)mhm_moveObjectAtIndex:(NSUInteger)idx1 toObjectAtIndex:(NSUInteger)idx2 {
     if (idx1 > idx2) {
         [self removeObjectAtIndex:idx1];
         [self insertObject:tmpObj atIndex:idx2];
