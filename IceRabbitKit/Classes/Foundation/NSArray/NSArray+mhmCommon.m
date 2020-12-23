@@ -11,40 +11,43 @@
 @implementation NSArray (mhmCommon)
 
 -(NSArray *)mhm_mapObjectsUsingBlock:(MapBlock)block {
+    if (self.count == 0) return nil;
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [result addObject:block(obj, idx)];
+        if (obj) {
+            if (block(obj, idx)) {
+                [result addObject:block(obj, idx)];
+            }
+        }
     }];
     return [result copy];
 }
 
 -(NSArray *)mhm_differenceObjectsWithArray:(NSArray *)other {
-    NSArray<NSOrderedCollectionChange *> * selfMoreCollection = [self differenceFromArray:other].insertions;
-    NSArray<NSOrderedCollectionChange *> * otherMoreCollection = [self differenceFromArray:other].removals;
-    NSMutableArray<NSOrderedCollectionChange *> * combinCollection = [NSMutableArray arrayWithArray:selfMoreCollection];
-    [combinCollection addObjectsFromArray:otherMoreCollection];
-    return [combinCollection mhm_mapObjectsUsingBlock:^id(id  _Nonnull obj, NSInteger index) {
-        return ((NSOrderedCollectionChange *)obj).object;
-    }];;
+    NSMutableArray * result = [NSMutableArray arrayWithArray:[self mhm_differenceObjectsFromArray:other]];
+    [result addObjectsFromArray:[self mhm_differenceObjectsToArray:other]];
+    return [result copy];
 }
 
 -(NSArray *)mhm_differenceObjectsFromArray:(NSArray *)other {
-    NSArray<NSOrderedCollectionChange *> * selfMoreCollection = [self differenceFromArray:other].insertions;
-    return [selfMoreCollection mhm_mapObjectsUsingBlock:^id(id  _Nonnull obj, NSInteger index) {
-        return ((NSOrderedCollectionChange *)obj).object;
-    }];;
+    NSMutableSet * selfSet = [NSMutableSet setWithArray:self];
+    NSSet * otherSet = [NSSet setWithArray:other];
+    [selfSet minusSet:otherSet];
+    return [selfSet allObjects];
 }
 
 -(NSArray *)mhm_differenceObjectsToArray:(NSArray *)other {
-    NSArray<NSOrderedCollectionChange *> * selfMoreCollection = [self differenceFromArray:other].removals;
-    return [selfMoreCollection mhm_mapObjectsUsingBlock:^id(id  _Nonnull obj, NSInteger index) {
-        return ((NSOrderedCollectionChange *)obj).object;
-    }];;
+    NSMutableSet * otherSet = [NSMutableSet setWithArray:other];
+    NSSet * selfSet = [NSSet setWithArray:self];
+    [otherSet minusSet:selfSet];
+    return [otherSet allObjects];
 }
 
 -(NSArray *)mhm_sameObjectsWithArray:(NSArray *)other {
-    NSArray * onlySelfObjects = [self mhm_differenceObjectsFromArray:other];
-    return [self mhm_differenceObjectsFromArray:onlySelfObjects];
+    NSMutableSet * selfSet = [NSMutableSet setWithArray:self];
+    NSSet * otherSet = [NSSet setWithArray:other];
+    [selfSet intersectSet:otherSet];
+    return [selfSet allObjects];
 }
 
 @end
