@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "NSArray+mhmCommon.h"
 #import "NSTimer+Weak.h"
+#import "MHMAuthorizationManager.h"
 
 FOUNDATION_EXPORT double IceRabbitKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char IceRabbitKitVersionString[];
