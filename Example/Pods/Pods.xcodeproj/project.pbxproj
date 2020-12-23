@@ -13,6 +13,10 @@
 		461240BE7B55C120C744750B06979D1B /* IceRabbitKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32579470BC3C974481EBFD78F72B6C02 /* IceRabbitKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		647AB3F984612E9143C542330FC18DE3 /* Pods-IceRabbitKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20E84A54A6DA2C5F2A62B0860E6FF31D /* Pods-IceRabbitKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D33FA9EAE9632BC0DCE3CA24908B703 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		87AEDB41259097E60086B195 /* MHMAuthorizationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 87AEDB3F259097E50086B195 /* MHMAuthorizationManager.h */; };
+		87AEDB42259097E60086B195 /* MHMAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87AEDB40259097E60086B195 /* MHMAuthorizationManager.m */; };
+		87F19D3C2593184900AF57EE /* NSArray+mhmCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F19D3A2593184900AF57EE /* NSArray+mhmCommon.m */; };
+		87F19D3D2593184900AF57EE /* NSArray+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F19D3B2593184900AF57EE /* NSArray+mhmCommon.h */; };
 		B8BA818856E571D05F5E8ABAA09898A3 /* IceRabbitKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F2C24A6CC4487DE8DD640B69AE51C0 /* IceRabbitKit-dummy.m */; };
 		C24A562D07CF263794BCE8B8D0E98786 /* NSTimer+Weak.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8AB58E92245021C08F9367F255B799 /* NSTimer+Weak.m */; };
 		C3C5752F6A1FC9D2F515C08299A585E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -57,6 +61,10 @@
 		7F6DDFE1AF044E8CC220B07829B37EAA /* IceRabbitKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IceRabbitKit-Info.plist"; sourceTree = "<group>"; };
 		81B0A4F3B8EC87BC790AEE2F1DE8F1EB /* Pods-IceRabbitKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		82435450FC4BF24B1655EC6A223ADB58 /* IceRabbitKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IceRabbitKit-prefix.pch"; sourceTree = "<group>"; };
+		87AEDB3F259097E50086B195 /* MHMAuthorizationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMAuthorizationManager.h; sourceTree = "<group>"; };
+		87AEDB40259097E60086B195 /* MHMAuthorizationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMAuthorizationManager.m; sourceTree = "<group>"; };
+		87F19D3A2593184900AF57EE /* NSArray+mhmCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+mhmCommon.m"; sourceTree = "<group>"; };
+		87F19D3B2593184900AF57EE /* NSArray+mhmCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+mhmCommon.h"; sourceTree = "<group>"; };
 		898B915E9CC38C8838835EA7AFA79D70 /* IceRabbitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IceRabbitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD1738CB501A2A2533134446E17A2F2 /* Pods-IceRabbitKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		921E2E4A19CA4479633B49D9DF4E290A /* Pods-IceRabbitKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IceRabbitKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 		45522D8ECB5C84EFDF669794F3C57783 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				87F19D392593182F00AF57EE /* NSArray */,
 				30FA61683425495291BA90DCAC70B907 /* NSTimer */,
 			);
 			name = Foundation;
@@ -162,6 +171,32 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		87AEDB3B259097910086B195 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				87AEDB3C259097B30086B195 /* Authorization */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		87AEDB3C259097B30086B195 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				87AEDB3F259097E50086B195 /* MHMAuthorizationManager.h */,
+				87AEDB40259097E60086B195 /* MHMAuthorizationManager.m */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		87F19D392593182F00AF57EE /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				87F19D3B2593184900AF57EE /* NSArray+mhmCommon.h */,
+				87F19D3A2593184900AF57EE /* NSArray+mhmCommon.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
 		885CC8E56DC97113D6A4AB41FDD09CF7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +208,7 @@
 		9CC12BDF30207FC98B8DAAD093054FD1 /* IceRabbitKit */ = {
 			isa = PBXGroup;
 			children = (
+				87AEDB3B259097910086B195 /* Utils */,
 				45522D8ECB5C84EFDF669794F3C57783 /* Foundation */,
 				554579409B013F07AD717BA36104F977 /* Pod */,
 				2BE8B871D43288FDDECED593184454C6 /* Support Files */,
@@ -252,6 +288,8 @@
 			files = (
 				461240BE7B55C120C744750B06979D1B /* IceRabbitKit-umbrella.h in Headers */,
 				081B038176FEAC11043388F06DAF2162 /* NSTimer+Weak.h in Headers */,
+				87AEDB41259097E60086B195 /* MHMAuthorizationManager.h in Headers */,
+				87F19D3D2593184900AF57EE /* NSArray+mhmCommon.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,8 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F19D3C2593184900AF57EE /* NSArray+mhmCommon.m in Sources */,
 				B8BA818856E571D05F5E8ABAA09898A3 /* IceRabbitKit-dummy.m in Sources */,
 				C24A562D07CF263794BCE8B8D0E98786 /* NSTimer+Weak.m in Sources */,
+				87AEDB42259097E60086B195 /* MHMAuthorizationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +514,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IceRabbitKit/IceRabbitKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IceRabbitKit/IceRabbitKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IceRabbitKit/IceRabbitKit.modulemap";
 				PRODUCT_MODULE_NAME = IceRabbitKit;
@@ -599,7 +639,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IceRabbitKit/IceRabbitKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IceRabbitKit/IceRabbitKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/IceRabbitKit/IceRabbitKit.modulemap";
 				PRODUCT_MODULE_NAME = IceRabbitKit;
