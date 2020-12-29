@@ -21,6 +21,8 @@
 		87F19DD4259498AD00AF57EE /* NSString+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F19DD2259498AD00AF57EE /* NSString+mhmCommon.h */; };
 		87F19DEE2594996100AF57EE /* MHMOCRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F19DEC2594996100AF57EE /* MHMOCRManager.m */; };
 		87F19DEF2594996100AF57EE /* MHMOCRManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F19DED2594996100AF57EE /* MHMOCRManager.h */; };
+		87F19E47259B5A6300AF57EE /* UIImage+mhmCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F19E45259B5A6300AF57EE /* UIImage+mhmCommon.m */; };
+		87F19E48259B5A6300AF57EE /* UIImage+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 87F19E46259B5A6300AF57EE /* UIImage+mhmCommon.h */; };
 		8FDF17336A3036F5CABFF2B42968C56F /* IceRabbitKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F0A17CA3AF6FCA8066046BA845A39 /* IceRabbitKit-dummy.m */; };
 		A95F17DDBAC1857AB5A9BE6F46A02444 /* IceRabbitKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 030AAAC617B3770306DDB6008D88542E /* IceRabbitKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEA66ACAE50632AFD1524895EE9D1F40 /* NSArray+mhmCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D880DBB4180A2D56CB0B570CC82DC30 /* NSArray+mhmCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +75,8 @@
 		87F19DD2259498AD00AF57EE /* NSString+mhmCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+mhmCommon.h"; sourceTree = "<group>"; };
 		87F19DEC2594996100AF57EE /* MHMOCRManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHMOCRManager.m; sourceTree = "<group>"; };
 		87F19DED2594996100AF57EE /* MHMOCRManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHMOCRManager.h; sourceTree = "<group>"; };
+		87F19E45259B5A6300AF57EE /* UIImage+mhmCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+mhmCommon.m"; sourceTree = "<group>"; };
+		87F19E46259B5A6300AF57EE /* UIImage+mhmCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+mhmCommon.h"; sourceTree = "<group>"; };
 		898B915E9CC38C8838835EA7AFA79D70 /* IceRabbitKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IceRabbitKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD1738CB501A2A2533134446E17A2F2 /* Pods-IceRabbitKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IceRabbitKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		915D0E0C2D772E43CB74272AF53E1C90 /* MHMAuthorizationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MHMAuthorizationManager.m; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 		3894422247103450F0965BF5AE613BBE /* IceRabbitKit */ = {
 			isa = PBXGroup;
 			children = (
+				87F19E43259B5A4200AF57EE /* UIKit */,
 				B2508B2CF09E44693B217627C85EDFCB /* Utils */,
 				A948C70A11C1DC09DEBD3A6F3F871D25 /* Foundation */,
 				264D7D8EC3BB191DDA05F79093303428 /* Pod */,
@@ -198,6 +203,24 @@
 				87F19DED2594996100AF57EE /* MHMOCRManager.h */,
 			);
 			path = Recognition;
+			sourceTree = "<group>";
+		};
+		87F19E43259B5A4200AF57EE /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				87F19E44259B5A5500AF57EE /* UIImage */,
+			);
+			name = UIKit;
+			path = IceRabbitKit/Classes/UIKit;
+			sourceTree = "<group>";
+		};
+		87F19E44259B5A5500AF57EE /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				87F19E46259B5A6300AF57EE /* UIImage+mhmCommon.h */,
+				87F19E45259B5A6300AF57EE /* UIImage+mhmCommon.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		885CC8E56DC97113D6A4AB41FDD09CF7 /* Development Pods */ = {
@@ -341,6 +364,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F19E48259B5A6300AF57EE /* UIImage+mhmCommon.h in Headers */,
 				A95F17DDBAC1857AB5A9BE6F46A02444 /* IceRabbitKit-umbrella.h in Headers */,
 				C3816F0DD9EB39A2B0A1C0C7C4C30A62 /* MHMAuthorizationManager.h in Headers */,
 				BEA66ACAE50632AFD1524895EE9D1F40 /* NSArray+mhmCommon.h in Headers */,
@@ -481,6 +505,7 @@
 				436A6E1B987D8A5DA35388BCEB8978FC /* NSArray+mhmCommon.m in Sources */,
 				87F19D912593389500AF57EE /* NSMutableArray+mhmCommon.m in Sources */,
 				2C9AF50BC6F6147ECDB9BA632AE309BD /* NSTimer+Weak.m in Sources */,
+				87F19E47259B5A6300AF57EE /* UIImage+mhmCommon.m in Sources */,
 				87F19DD3259498AD00AF57EE /* NSString+mhmCommon.m in Sources */,
 				87F19DEE2594996100AF57EE /* MHMOCRManager.m in Sources */,
 			);

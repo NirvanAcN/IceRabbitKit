@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSMutableArray (mhmCommon)
 
-- (void)mhm_moveObjectAtIndex:(NSUInteger)idx1 toObjectAtIndex:(NSUInteger)idx2;
+- (nullable NSMutableArray *)mhm_moveObjectAtIndex:(NSUInteger)idx1 toObjectAtIndex:(NSUInteger)idx2;
 
 @end
 
