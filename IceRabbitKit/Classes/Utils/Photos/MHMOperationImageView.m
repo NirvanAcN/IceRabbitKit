@@ -12,6 +12,9 @@
 @end
 
 @implementation MHMOperationImageView
+{
+    BOOL _longPressFlag;
+}
 
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -28,6 +31,14 @@
         
         UIPanGestureRecognizer * panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanGestureRecognizer:)];
         [self addGestureRecognizer:panGestureRecognizer];
+        
+        UITapGestureRecognizer * tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDoubleTapGestureRecognizer:)];
+        tapGestureRecognizer.numberOfTapsRequired = 2;
+        [self addGestureRecognizer:tapGestureRecognizer];
+        
+        UILongPressGestureRecognizer * longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPressGestureRecognizer:)];
+        longPressGestureRecognizer.delegate = self;
+        [self addGestureRecognizer:longPressGestureRecognizer];
     }
     return self;
 }
@@ -51,9 +62,33 @@
     [sender setTranslation:CGPointMake(0, 0) inView:self.superview];
 }
 
+-(void)onDoubleTapGestureRecognizer:(UITapGestureRecognizer *)sender {
+    [self removeFromSuperview];
+}
+
+-(void)onLongPressGestureRecognizer:(UILongPressGestureRecognizer *)sender {
+    switch (sender.state) {
+        case UIGestureRecognizerStateBegan:
+            _longPressFlag = YES;
+            break;
+        case UIGestureRecognizerStateEnded:
+            _longPressFlag = NO;
+        default:
+            break;
+    }
+}
+
 // 解决手势冲突
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
+}
+
+-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    if (_longPressFlag) {
+        return YES;
+    } else {
+        return [super pointInside:point withEvent:event];
+    }
 }
 
 @end
