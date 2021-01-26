@@ -36,4 +36,25 @@
     return image;
 }
 
++(UIImage *)mhm_imageByColor:(UIColor *)color andSize:(CGSize)targetSize {
+    UIGraphicsBeginImageContext(targetSize);
+    CGRect rect = (CGRect){CGPointZero, targetSize};
+    UIImage * resultImage;
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    resultImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultImage;
+}
+
+-(UIImage *)mhm_compositeWithImage:(UIImage *)targetImage {
+    UIGraphicsBeginImageContext(self.size);
+    [self drawInRect:(CGRect){CGPointZero, self.size}];
+    [targetImage drawInRect:(CGRect){CGPointZero, targetImage.size}];
+    UIImage * compositeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return compositeImage;
+}
+
 @end

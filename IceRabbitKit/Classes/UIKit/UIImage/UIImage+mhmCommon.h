@@ -19,6 +19,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIImage *)mhm_reDrawImageWithSize:(CGSize)targetSize;
 
+/// 生成指定颜色、尺寸的图片
+/// @param color 指定图片颜色
+/// @param targetSize 指定图片尺寸
++(nullable UIImage *)mhm_imageByColor:(nonnull UIColor *)color andSize:(CGSize)targetSize;
+
+/// 与另一张图片合成一张新的图片
+/// @param targetImage 另一张图片
+-(nullable UIImage *)mhm_compositeWithImage:(nonnull UIImage *)targetImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

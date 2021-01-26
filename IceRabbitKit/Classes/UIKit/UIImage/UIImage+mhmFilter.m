@@ -11,11 +11,12 @@
 
 -(UIImage *)mhm_imageOfFilter:(MHMImageFilterName)filterName {
     CIFilter * filter = [CIFilter filterWithName:filterName];
-    CIImage * beginImage = [CIImage imageWithCGImage:self.CGImage];
+    struct CGImage * foo = self.CGImage;
+    CIImage * beginImage = [CIImage imageWithCGImage:foo];
     [filter setValue:beginImage forKey:kCIInputImageKey];
     CIImage * outputImage = filter.outputImage;
     struct CGImage * outputCGImage = [[CIContext contextWithOptions:nil] createCGImage:outputImage fromRect:outputImage.extent];
-    UIImage * newImage = [UIImage imageWithCGImage:outputCGImage];
+    UIImage * newImage = [UIImage imageWithCGImage:outputCGImage scale: self.scale orientation:self.imageOrientation];
     return newImage;
 }
 
