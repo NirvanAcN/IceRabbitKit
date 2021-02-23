@@ -57,4 +57,17 @@
     return compositeImage;
 }
 
+-(UIImage *)mhm_addBackgroundImage:(UIImage *)backgroundImae {
+    return [backgroundImae mhm_compositeWithImage:self];
+}
+
+-(nullable UIImage *)mhm_generateBackgroundWithColor:(nonnull UIColor *)backgroundColor {
+    UIImage * backgroundImage = [UIImage mhm_imageByColor:backgroundColor andSize:self.size];
+    return [self mhm_addBackgroundImage:backgroundImage];
+}
+
+-(nullable UIImage *)mhm_original {
+    return [self imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
 @end

@@ -28,6 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param targetImage 另一张图片
 -(nullable UIImage *)mhm_compositeWithImage:(nonnull UIImage *)targetImage;
 
+-(nullable UIImage *)mhm_addBackgroundImage:(nonnull UIImage *)backgroundImae;
+
+-(nullable UIImage *)mhm_generateBackgroundWithColor:(nonnull UIColor *)backgroundColor;
+
+-(nullable UIImage *)mhm_original;
+
 @end
 
 NS_ASSUME_NONNULL_END
